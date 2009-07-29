@@ -1,16 +1,18 @@
-%define real_name AnyData
+%define upstream_name    AnyData
+%define upstream_version 0.10
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
 
 Summary:	Easy access to data in many formats
-Name:		perl-%{real_name}
-Version:	0.10
-Release:	%mkrel 3
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/J/JZ/JZUCKER/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/J/JZ/JZUCKER/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The rather wacky idea behind this module and its sister module DBD::AnyData is
@@ -32,8 +34,7 @@ AnyData itself and thereby be accessible by either the tiedhash or DBI/SQL
 interface.
 
 %prep
-
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,7 +45,6 @@ make test
 
 %install
 rm -rf %{buildroot}
-
 %makeinstall_std
 
 %clean 
