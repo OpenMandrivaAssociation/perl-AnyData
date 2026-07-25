@@ -1,15 +1,15 @@
 %define upstream_name    AnyData
-%define upstream_version 0.10
+%define upstream_version 0.12
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Easy access to data in many formats
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/J/JZ/JZUCKER/%{upstream_name}-%{upstream_version}.tar.bz2
+URL:		https://metacpan.org/release/AnyData
+Source0:	https://cpan.metacpan.org/authors/id/R/RE/REHSACK/AnyData-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
