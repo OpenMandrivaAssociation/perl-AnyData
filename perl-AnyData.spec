@@ -8,7 +8,7 @@ Release:	1
 Summary:	Easy access to data in many formats
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://metacpan.org/release/AnyData
+URL:		https://github.com/perl5-dbi/AnyData
 Source0:	https://cpan.metacpan.org/authors/id/R/RE/REHSACK/AnyData-%{upstream_version}.tar.gz
 
 BuildRequires:	make
