@@ -1,15 +1,13 @@
 %define upstream_name    AnyData
-%define upstream_version 0.12
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.12
+Release:	2
 
 Summary:	Easy access to data in many formats
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://github.com/perl5-dbi/AnyData
-Source0:	https://cpan.metacpan.org/authors/id/R/RE/REHSACK/AnyData-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RE/REHSACK/AnyData-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -35,7 +33,7 @@ AnyData itself and thereby be accessible by either the tiedhash or DBI/SQL
 interface.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -65,9 +63,7 @@ make test
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.100.0-1mdv2011.0
 + Revision: 402961
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.10-3mdv2009.0
+- rebuild using %0.12 Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.10-3mdv2009.0
 + Revision: 241144
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
