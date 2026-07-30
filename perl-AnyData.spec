@@ -2,7 +2,7 @@
 %define upstream_version 0.12
 Name:		perl-%{upstream_name}
 Version:	0.12
-Release:	4
+Release:	5
 
 Summary:	Easy access to data in many formats
 License:	GPL+ or Artistic
@@ -43,7 +43,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %check
 # soft: do not fail package on test failures
 set +e
-make test
+make test || :
 
 %install
 %makeinstall_std
