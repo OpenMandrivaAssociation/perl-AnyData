@@ -2,7 +2,7 @@
 %define upstream_version 0.12
 Name:		perl-%{upstream_name}
 Version:	0.12
-Release:	2
+Release:	3
 
 Summary:	Easy access to data in many formats
 License:	GPL+ or Artistic
