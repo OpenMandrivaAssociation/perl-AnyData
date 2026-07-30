@@ -1,13 +1,14 @@
 %define upstream_name    AnyData
+%define upstream_version 0.12
 Name:		perl-%{upstream_name}
 Version:	0.12
-Release:	2
+Release:	1
 
 Summary:	Easy access to data in many formats
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://github.com/perl5-dbi/AnyData
-Source0:	https://cpan.metacpan.org/authors/id/R/RE/REHSACK/AnyData-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RE/REHSACK/AnyData-0.12.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
